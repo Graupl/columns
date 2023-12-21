@@ -11,7 +11,7 @@
 
     // Disable columns on small screens to avoid horizontal scrolling.
     @media screen and (max-width: #{defaults.$columns-disable-width}) {
-      --graupl-columns-min-width: defaults.$columns-max-width;
+      --graupl-columns-min-width: #{defaults.$columns-max-width};
     }
   }
 }

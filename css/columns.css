@@ -6,7 +6,7 @@
   }
   @media screen and (max-width: 48ch) {
     .columns {
-      --graupl-columns-min-width: defaults.$columns-max-width;
+      --graupl-columns-min-width: 1fr;
     }
   }
 }
