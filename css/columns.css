@@ -1,11 +1,13 @@
-.columns {
-  display: grid;
-  grid-template-columns: var(--graupl-columns, repeat(auto-fit, minmax(calc((var(--graupl-content-max-width, 96ch) - var(--graupl-gap, 1rem) * 2) / 3), 1fr)));
-  gap: var(--graupl-gap, 1rem);
-}
-@media screen and (max-width: 48ch) {
+@layer graupl.component {
   .columns {
-    --graupl-columns-min-width: defaults.$columns-max-width;
+    display: grid;
+    grid-template-columns: var(--graupl-columns, repeat(auto-fit, minmax(calc((var(--graupl-content-max-width, 96ch) - var(--graupl-gap, 1rem) * 2) / 3), 1fr)));
+    gap: var(--graupl-gap, 1rem);
+  }
+  @media screen and (max-width: 48ch) {
+    .columns {
+      --graupl-columns-min-width: defaults.$columns-max-width;
+    }
   }
 }
 

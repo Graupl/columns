@@ -3,13 +3,15 @@
 @use "variables" as *;
 @use "defaults";
 
-.columns {
-  display: grid;
-  grid-template-columns: var(--graupl-columns, repeat(#{$columns-count}, minmax(#{$columns-min-width}, #{$columns-max-width})));
-  gap: $columns-gap;
+@layer graupl.component {
+  .columns {
+    display: grid;
+    grid-template-columns: var(--graupl-columns, repeat(#{$columns-count}, minmax(#{$columns-min-width}, #{$columns-max-width})));
+    gap: $columns-gap;
 
-  // Disable columns on small screens to avoid horizontal scrolling.
-  @media screen and (max-width: #{defaults.$columns-disable-width}) {
-    --graupl-columns-min-width: defaults.$columns-max-width;
+    // Disable columns on small screens to avoid horizontal scrolling.
+    @media screen and (max-width: #{defaults.$columns-disable-width}) {
+      --graupl-columns-min-width: defaults.$columns-max-width;
+    }
   }
 }
